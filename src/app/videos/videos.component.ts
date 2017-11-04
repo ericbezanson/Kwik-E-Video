@@ -1,3 +1,4 @@
+import { videos } from "../app.component"
 import { Video } from './../models/video';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
@@ -9,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class VideosComponent{
 
+  /*
   videos: Video[] = [
     {
       title: "Title 1",
@@ -23,6 +25,9 @@ export class VideosComponent{
       genre: "Action"    
     },
   ]
+  */
+
+  videos: Video[] = videos;
 
   filteredVideos: Video[];
 
@@ -40,6 +45,9 @@ export class VideosComponent{
     },
     {
       name: "Action"
+    },
+    {
+      name: "Children"  
     },
   ]
 
