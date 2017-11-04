@@ -5,6 +5,7 @@ import { AuthService } from './auth.service';
 import { Component } from '@angular/core';
 
 
+
 export let videos: Video[] = [
   {
     title: "Title 1",
