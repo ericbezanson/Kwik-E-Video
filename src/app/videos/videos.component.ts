@@ -44,21 +44,21 @@ export class VideosComponent{
 
   constructor(route: ActivatedRoute) { 
     // Have to retrieve list of videos here
-    // Discuss with Evan
-    this.filteredVideos = this.videos;
-    
-    // Retireve genre filter
-    /*
+    // Discuss with Evan    
+    this.genre = "All";
+
+    // Retrieve genre filter
     route.queryParamMap.subscribe(params => {
       this.genre = params.get('genre');
-      
-      /*
-      this.filteredVideos = (this.genre) ?
-        this.videos.filter(v => v.genre === this.genre) :
-        this.videos
-        
-    }); 
-    */   
-  }
+  
+      console.log("Genre:");
+      console.log(this.genre);
 
+      if(this.genre == "All"){
+        this.filteredVideos = this.videos;
+      } else {
+        this.filteredVideos = this.videos.filter(v => (v.genre === this.genre));
+      };
+    });         
+  }
 }
