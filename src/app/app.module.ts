@@ -24,6 +24,7 @@ import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.componen
 import { LoginComponent } from './login/login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UnavailableComponent } from './unavailable/unavailable.component';
+import { PlayerComponent } from './player/player.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { UnavailableComponent } from './unavailable/unavailable.component';
     AdminVideosComponent,
     AdminOrdersComponent,
     LoginComponent,
-    UnavailableComponent
+    UnavailableComponent,
+    PlayerComponent
   ],
   imports: [
     BrowserModule,
@@ -55,6 +57,8 @@ import { UnavailableComponent } from './unavailable/unavailable.component';
       { path: 'check-out', component: CheckoutComponent, canActivate: [AuthGuardService]},
       { path: 'order-success', component: OrderSuccessComponent, canActivate: [AuthGuardService] },
       { path: 'my/library', component: MyLibraryComponent, canActivate: [AuthGuardService] },
+      { path: 'player', component: PlayerComponent, canActivate: [AuthGuardService] },
+
 
       { path: 'admin/videos', component: AdminVideosComponent, canActivate: [AuthGuardService, AdminAuthGuardService] },
       { path: 'admin/orders', component: AdminOrdersComponent, canActivate: [AuthGuardService, AdminAuthGuardService] },
