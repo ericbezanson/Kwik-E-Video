@@ -24,6 +24,7 @@ import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.componen
 import { LoginComponent } from './login/login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UnavailableComponent } from './unavailable/unavailable.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { UnavailableComponent } from './unavailable/unavailable.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
