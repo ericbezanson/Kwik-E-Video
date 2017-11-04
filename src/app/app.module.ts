@@ -24,11 +24,8 @@ import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.componen
 import { LoginComponent } from './login/login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UnavailableComponent } from './unavailable/unavailable.component';
-<<<<<<< HEAD
 import { HttpClientModule } from '@angular/common/http';
-=======
 import { PlayerComponent } from './player/player.component';
->>>>>>> 244299588c3b80ba3df19c51ec24a0ebe1e96822
 
 @NgModule({
   declarations: [
