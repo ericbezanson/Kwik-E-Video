@@ -1,3 +1,31 @@
-<p>
-  videos works!
-</p>
+<div class="row">
+  <div class="col-3">    
+      <div class="list-group">
+        <a 
+          *ngFor="let g of genres"
+          routerLink="/videos/"
+          [queryParams]="{genre: g.name}"         
+          class="list-group-item list-group-item-action"
+          [class.active]="genre === g.name">          
+            {{ g.name }}
+        </a>
+      </div>  
+  </div>
+  <div class="col">
+    <div class="row">
+      <ng-container *ngFor="let v of filteredVideos; let i = index">
+          <div class="col">
+            <div class="card" style="width: 15rem;">
+              <img class="card-img-top" src="{{ v.imageUrl }}" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">{{ v.title }}</h4>
+                <p class="card-text">{{ v.description }}</p>
+                <a [routerLink]="['/player', v.videoUrl]" class="btn btn-primary">Rent movie</a>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="(i + 1) % 2 === 0" class="w-100"></div>
+      </ng-container>
+    </div>
+  </div>
+</div>
