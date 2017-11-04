@@ -10,24 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class VideosComponent{
 
-  /*
-  videos: Video[] = [
-    {
-      title: "Title 1",
-      imageUrl: "http://via.placeholder.com/350x500",
-      description: "Sample desc 1",
-      genre: "Horror"    
-    },
-    {
-      title: "Title 2",
-      imageUrl: "http://via.placeholder.com/350x500",
-      description: "Sample desc 2",
-      genre: "Action"    
-    },
-  ]
-  */
-
-  videos: Video[] = videos;
+  videos: Video[];
 
   filteredVideos: Video[];
 
@@ -53,12 +36,17 @@ export class VideosComponent{
 
   constructor(route: ActivatedRoute) { 
     // Have to retrieve list of videos here
-    // Discuss with Evan    
+    // Discuss with Evan 
+    this.videos = videos;   
     this.genre = "All";
 
     // Retrieve genre filter
     route.queryParamMap.subscribe(params => {
       this.genre = params.get('genre');
+
+      if(this.genre === null) {
+        this.genre = "All";
+      }
   
       console.log("Genre:");
       console.log(this.genre);
