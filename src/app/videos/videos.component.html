@@ -3,7 +3,7 @@
       <div class="list-group">
         <a 
           *ngFor="let g of genres"
-          routerLink="/"
+          routerLink="/videos/"
           [queryParams]="{genre: g.name}"         
           class="list-group-item list-group-item-action"
           [class.active]="genre === g.name">          
