@@ -59,7 +59,7 @@ import { PlayerComponent } from './player/player.component';
       { path: 'check-out', component: CheckoutComponent, canActivate: [AuthGuardService]},
       { path: 'order-success', component: OrderSuccessComponent, canActivate: [AuthGuardService] },
       { path: 'my/library', component: MyLibraryComponent, canActivate: [AuthGuardService] },
-      { path: 'player', component: PlayerComponent, canActivate: [AuthGuardService] },
+      { path: 'player/:url', component: PlayerComponent, canActivate: [AuthGuardService] },
 
 
       { path: 'admin/videos', component: AdminVideosComponent, canActivate: [AuthGuardService, AdminAuthGuardService] },

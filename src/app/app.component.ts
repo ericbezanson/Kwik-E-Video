@@ -37,7 +37,7 @@ export class AppComponent {
             imageUrl: this.Videos[i].poster.thumbnail_url,
             description: this.Videos[i].description,
             genre: this.Videos[i].genre,
-            videoUrl: this.Videos[i].variant_urls.url,
+            videoUrl: this.Videos[i].variant_urls[0].url,
         }
         videos.push(video);
       }

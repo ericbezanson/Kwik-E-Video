@@ -20,7 +20,7 @@
               <div class="card-body">
                 <h4 class="card-title">{{ v.title }}</h4>
                 <p class="card-text">{{ v.description }}</p>
-                <a href="#" class="btn btn-primary">Rent movie</a>
+                <a [routerLink]="['/player', v.videoUrl]" class="btn btn-primary">Rent movie</a>
               </div>
             </div>
           </div>
