@@ -27,10 +27,10 @@ export class VideosComponent{
       name: "Horror"
     },
     {
-      name: "Action"
+      name: "Drama"
     },
     {
-      name: "Children"  
+      name: "Family"  
     },
   ]
 
