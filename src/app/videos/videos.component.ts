@@ -24,7 +24,7 @@ export class VideosComponent{
     },
   ]
 
-  filteredVideos;
+  filteredVideos: Video[];
 
   genre: string;
 
