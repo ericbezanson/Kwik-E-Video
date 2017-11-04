@@ -5,11 +5,24 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './videos.component.html',
   styleUrls: ['./videos.component.css']
 })
-export class VideosComponent implements OnInit {
+export class VideosComponent{
 
-  constructor() { }
+  videos = [
+    {
+      title: "Title 1",
+      imageUrl: "http://via.placeholder.com/350x500",
+      description: "Sample desc 1"
+    },
+    {
+      title: "Title 2",
+      imageUrl: "http://via.placeholder.com/350x500",
+      description: "Sample desc 2"
+    },
+  ]
 
-  ngOnInit() {
+  constructor() { 
+    // Have to retrieve list of videos here
+    // Discuss with Evan
   }
 
 }

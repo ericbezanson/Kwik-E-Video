@@ -1,3 +1,24 @@
-<p>
-  videos works!
-</p>
+<div class="row">
+  <div class="col-3">
+    <ul class="list-group">
+      
+    </ul>
+  </div>
+  <div class="col">
+    <div class="row">
+      <ng-container *ngFor="let v of videos; let i = index">
+          <div class="col">
+            <div class="card" style="width: 15rem;">
+              <img class="card-img-top" src="{{ v.imageUrl }}" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">{{ v.title }}</h4>
+                <p class="card-text">{{ v.description }}</p>
+                <a href="#" class="btn btn-primary">Rent movie</a>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="(i + 1) % 2 === 0" class="w-100"></div>
+      </ng-container>
+    </div>
+  </div>
+</div>

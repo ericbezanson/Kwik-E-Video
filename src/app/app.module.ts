@@ -43,7 +43,7 @@ import { UnavailableComponent } from './unavailable/unavailable.component';
     AngularFireAuthModule,
     NgbModule.forRoot(),
     RouterModule.forRoot([
-      { path: '', component: HomeComponent },
+      { path: '', component: VideosComponent },
       { path: 'videos', component: VideosComponent},
       { path: 'shopping-cart', component: ShoppingCartComponent},
       { path: 'check-out', component: CheckoutComponent },
