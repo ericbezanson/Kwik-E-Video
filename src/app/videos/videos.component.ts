@@ -1,3 +1,4 @@
+import { Video } from './../models/video';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
@@ -8,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class VideosComponent{
 
-  videos = [
+  videos: Video[] = [
     {
       title: "Title 1",
       imageUrl: "http://via.placeholder.com/350x500",
